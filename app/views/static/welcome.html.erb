@@ -1,0 +1,6 @@
+<h1>Welcome <%= @params %><h1>
+
+<% @gossips.each_with_index do |un_gossip,index| %>
+  <p><%= un_gossip[:title] %></p>
+<% end %>
+
