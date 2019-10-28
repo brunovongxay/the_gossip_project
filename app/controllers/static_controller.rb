@@ -6,14 +6,18 @@ class StaticController < ApplicationController
   end
 
   def welcome
-   @params = params[:first_name]
-    @gossips = []
-   Gossip.all.each do |un_gossip|
-    @gossips << {author: un_gossip.user.first_name, title: un_gossip.title, user_id: un_gossip.user.id}
-   end
   end
 
   def home
+    @users = User.all
+    @gossips = Gossip.all
+  end
+
+  def show
+    @id = params[:id]
+   @user = User.find(@id)
+   @city = @user.city
+   puts "Notre params est ici : #{params}"
   end
 
 end
