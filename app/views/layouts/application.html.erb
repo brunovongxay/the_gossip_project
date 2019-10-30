@@ -2,34 +2,41 @@
 <html>
 
   <head>
-    <title>TheGossipProject</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>The Gossip Project</title>
+    <link rel="shortcut icon" href="gossip.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8813a93217.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="http://localhost:3000/home">Gossip</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" href="http://localhost:3000/welcome">Welcome <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="http://localhost:3000/team">Team</a>
-        <a class="nav-item nav-link" href="http://localhost:3000/contact">Contact</a>
-      </div>
-    </div>
-  </nav>
+  <body>  
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white">
+    <a class="my-0 mr-md-auto font-weight-normal navbar-brand" href="http://localhost:3000/home" title="Home">GOSSIP</a>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-white" href="http://localhost:3000/welcome">Welcome</a>
+        <a class="p-2 text-white" href="http://localhost:3000/team">Team</a>
+        <a class="p-2 text-white" href="http://localhost:3000/contact/show">Contact</a>
+    </nav>
+</div>
+
 <br>
 <%= yield %>
   </body>
 </html>
+
+
+
+
+
+

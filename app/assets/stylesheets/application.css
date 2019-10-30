@@ -14,8 +14,17 @@
  *= require_self
  */
 
+ .background { 
+
+  background-image: url("https://unsplash.com/photos/s1ihVBg5tbI");
+
+}
 
 h1
 {
-   color: blue;
+   color:black;
+}
+
+body {
+  font-family: 'Varela Round', cursive;
 }

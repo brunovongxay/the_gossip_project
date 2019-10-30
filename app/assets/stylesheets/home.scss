@@ -1,0 +1,25 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron-hero { 
+
+  height: 666px;
+
+  background-image: url("ben-white-s1ihVBg5tbI-unsplash.jpg");
+  margin-top: -70px;
+  margin-bottom: -150px;
+  
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
+}
+
+button {
+  
+display: block;
+  margin : auto;
+
+} 
