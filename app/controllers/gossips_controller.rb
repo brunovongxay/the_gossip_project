@@ -21,38 +21,51 @@ class GossipsController < ApplicationController
 
 #   end
 
-  def index
-      @gossip = Gossip.all
+    def index
+      @gossips = Gossip.all
     end
+
     def show
       @gossip = Gossip.find(params[:id])
     end
+
     def edit
-      @gossip = Gossip.find(params[:id])
+      @gossips = Gossip.find(params[:id]) 
     end
+
     def update
-      @gossip= Gossip.find(params[:id])
-      post_params
-      @gossip.update(gossip_params)
-      redirect_to gossips_path
+      @gossip = Gossip.find(params[:id])
+      @gossip.update(gossip_params) 
+      redirect_to gossip_path
     end
+
     def new
-      @gossip = Gossip.new
+      @gossips = Gossip.new
     end
+
     def create
-      gossip = Gossip.create(gossip_params)
-      redirect_to gossip_path(gossip.id)
+      @gossip = Gossip.new(gossip_params)
+      if @gossip.save
+        flash[:notice] = "Gossip was successfully created"
+        redirect_to gossip_path(@gossip)
+      else
+      render 'new'
+      end
     end
+    
     def destroy
       @gossip = Gossip.find(params[:id])
+      JoinTableGossipTag.where(gossip_id: @gossip.id).find_each do |gt|
+      gt.destroy
+      end
       @gossip.destroy
       redirect_to gossips_path
     end
-  end
-  
-  private
-  def gossip_params
-    params.require(:gossip).permit(:title,:content)
-  end
 
+    private
+    def gossip_params
+      params.permit(:data)
+      params.require(:gossip).permit(:title,:content)
+    end
 
+end

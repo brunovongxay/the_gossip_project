@@ -14,10 +14,11 @@
  *= require_self
  */
 
- .background { 
+.jumbotron-hero { 
 
-  background-image: url("https://unsplash.com/photos/s1ihVBg5tbI");
-
+  margin-top: -70px;
+  margin-bottom: -150px;
+  
 }
 
 h1

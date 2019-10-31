@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>The Gossip Project</title>
-    <link rel="shortcut icon" href="gossip.png">
+    <link rel="shortcut icon" href="/assets/gossip.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/8813a93217.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
@@ -21,18 +20,21 @@
   </head>
 
   <body>  
-  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white">
-    <a class="my-0 mr-md-auto font-weight-normal navbar-brand" href="http://localhost:3000/home" title="Home">GOSSIP</a>
-    <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-white" href="http://localhost:3000/welcome">Welcome</a>
-        <a class="p-2 text-white" href="http://localhost:3000/team">Team</a>
-        <a class="p-2 text-white" href="http://localhost:3000/contact/show">Contact</a>
+  <div class="d-flex flex-column flex-md-row align-items-center px-md-4 bg-white">
+    <a class="mr-md-auto navbar-brand" href="http://localhost:3000/home" title="Home"><img style="max-width:50px; margin-top: -14px;" src="/assets/gossip.png"></a>
+    
+    <nav class="my-2 my-md-0 mr-md-10">
+        <a href="<%=new_gossip_path  %>" class ="btn btn-primary rounded-pill">New Post</a>
+        <a class="p-3 text-dark" href="http://localhost:3000/gossips">Gossips</a>
+        <a class="p-3 text-dark" href="http://localhost:3000/team">Team</a>
+        <a class="p-3 text-dark" href="http://localhost:3000/contact/show">Contact</a>
     </nav>
 </div>
 
 <br>
 <%= yield %>
   </body>
+
 </html>
 
 

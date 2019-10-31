@@ -1,32 +1,31 @@
-# <html>
-#  <body>
-#    <!-- ... -->
-#    <%= form_tag gossips_path, method: 'post' do %>
-#      <%= label_tag 'Title' %>
-#      <%= text_field_tag 'title' %>
-#      <br /> <br />
-#      <%= label_tag 'Content' %>
-#      <%= text_area_tag 'content' %>
-#      <br /> <br />
-#      <%= submit_tag 'Create Gossip' %>
-#    <% end %>
-#    <!-- ... -->
-#  </body>
-# </html>
-
-<h1>Créer article</h1>
-<%= form_for @gossip do |f| %>
-  <div class="form-group">
-    <label>Titre de l'article</label>
-    <%= f.text_field :title, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <label>contenu de l'article</label>
-      <%= f.text_area :content, class: 'form-control' %>
+<div class="jumbotron jumbotron-fluid jumbotron-hero">
+  <br>
+  <br>
+  <br>
+  <div class="text-center">
+    <h1>Please enter the title and your gossip</h1>
+  <br>
+  <br>
+  <br>
+  <div class="d-flex justify-content-center">
+  <%= form_for @gossips do |f| %>
+      <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <h4>The Title</h4>
+            <label class="sr-only" for="inlineFormInputName">Name</label>
+              <%= f.text_field :title, class: "form-control rounded-pill" %>
+          </div>
+          <div class="col-auto my-1">
+            <h4>The Gossip</h4>
+            <label class="sr-only" for="inlineFormInputGossip">Gossip</label>
+              <%= f.text_field :content, class: "form-control rounded-pill" %>
+          </div>
       </div>
-      <div class="form-group">
-        <button type="submit">créer l'article</button>
-        </div>
-<% end %>
-
-
+      <div class="col-auto my-1">
+        <button type="submit" class="btn btn-dark rounded-pill">Submit</button>
+      </div>
+  </form>
+  <% end %>
+  </div>
+  </div>
+</div>

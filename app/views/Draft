@@ -20,3 +20,7 @@
       </div>
     </div>
   </nav>
+
+
+
+<h5 class="card-title"><%= un_gossip.user.first_name %> <%= un_gossip.user.last_name %> <a href="http://localhost:3000/" class="btn btn-outline-dark rounded-pill">Profile Author</a></h5>
